@@ -1,64 +1,64 @@
+<script setup>
+import { createApp } from "vue";
+</script>
+
 <template>
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#" id="month" value="1">1 Month</a>
-    <a href="#" id="month" value="2">2 Month</a>
-    <a href="#" id="month" value="3">3 Month</a>
-    <a href="#" id="month" value="4">4 Month</a>
-    <a href="#" id="month" value="5">5 Month</a>
-    <a href="#" id="month" value="6">6 Month</a>
-    <a href="#" id="month" value="7">7 Month</a>
-    <a href="#" id="month" value="8">8 Month</a>
-    <a href="#" id="month" value="9">9 Month</a>
-    <a href="#" id="month" value="10">10 Month</a>
-    <a href="#" id="month" value="11">11 Month</a>
-    <a href="#" id="month" value="12">12 Month</a>
-  </div>
-</div>
+    <div class="dropdown">
+      <select v-model="periodChoice">
+        <option :value="undefined" disabled>Выберите Период</option>
+        <option :value="+1">1</option>
+        <option :value="+2">2</option>
+        <option :value="+3">3 Месяца</option>
+        <option :value="+4">4 Месяца</option>
+        <option :value="+5">5 Месяцев</option>
+        <option :value="+6">6 Месяцев</option>
+        <option :value="+7">7 Месяцев</option>
+        <option :value="+8">8 Месяцев</option>
+        <option :value="+9">9 Месяцев</option>
+        <option :value="+10">10 Месяцев</option>
+        <option :value="+11">11 Месяцев</option>
+        <option :value="+12">12 Месяцев</option>
+        <!-- <option :value="{ number: 1 }">1</option>
+        <option :value="{ number: 2 }">2</option>
+        <option :value="{ number: 3 }">3 Месяца</option>
+        <option :value="{ number: 4 }">4 Месяца</option>
+        <option :value="{ number: 5 }">5 Месяцев</option>
+        <option :value="{ number: 6 }">6 Месяцев</option>
+        <option :value="{ number: 7 }">7 Месяцев</option>
+        <option :value="{ number: 8 }">8 Месяцев</option>
+        <option :value="{ number: 9 }">9 Месяцев</option>
+        <option :value="{ number: 10 }">10 Месяцев</option>
+        <option :value="{ number: 11 }">11 Месяцев</option>
+        <option :value="{ number: 12 }">12 Месяцев</option> -->
+      </select>
+    </div>
 </template>
 
+<script>
+// const vueApp = createApp({
+//   data() {
+//     return {
+//       periodChoice: 0
+//     }
+//   }
+// })
+// vueApp.mount("#vueApp")
+</script>
+
 <style scoped>
-/* Dropdown Button */
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 24px 16px 24px;
-  font-size: 16px;
+.dropdown > select {
+  width: 100%;
   border: none;
+  height: 100%;
+  background: #04aa6d;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.dropdown > select > option {
+  background: rgb(255, 255, 255);
+  color: #000;
 }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  overflow: visible;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 121px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.dropdown > select > option:hover {
+  background: rgb(228, 228, 228);
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 7px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
