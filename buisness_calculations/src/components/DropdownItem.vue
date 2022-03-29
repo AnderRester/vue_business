@@ -3,22 +3,22 @@ import { createApp } from "vue";
 </script>
 
 <template>
-    <div class="dropdown">
-      <select v-model="periodChoice">
-        <option :value="undefined" disabled>Выберите Период</option>
-        <option :value="+1">1</option>
-        <option :value="+2">2</option>
-        <option :value="+3">3 Месяца</option>
-        <option :value="+4">4 Месяца</option>
-        <option :value="+5">5 Месяцев</option>
-        <option :value="+6">6 Месяцев</option>
-        <option :value="+7">7 Месяцев</option>
-        <option :value="+8">8 Месяцев</option>
-        <option :value="+9">9 Месяцев</option>
-        <option :value="+10">10 Месяцев</option>
-        <option :value="+11">11 Месяцев</option>
-        <option :value="+12">12 Месяцев</option>
-        <!-- <option :value="{ number: 1 }">1</option>
+  <div class="dropdown">
+    <select v-model="periodChoice">
+      <option :value="undefined" disabled>Выберите Период</option>
+      <option :value="+1">1</option>
+      <option :value="+2">2</option>
+      <option :value="+3">3 Месяца</option>
+      <option :value="+4">4 Месяца</option>
+      <option :value="+5">5 Месяцев</option>
+      <option :value="+6">6 Месяцев</option>
+      <option :value="+7">7 Месяцев</option>
+      <option :value="+8">8 Месяцев</option>
+      <option :value="+9">9 Месяцев</option>
+      <option :value="+10">10 Месяцев</option>
+      <option :value="+11">11 Месяцев</option>
+      <option :value="+12">12 Месяцев</option>
+      <!-- <option :value="{ number: 1 }">1</option>
         <option :value="{ number: 2 }">2</option>
         <option :value="{ number: 3 }">3 Месяца</option>
         <option :value="{ number: 4 }">4 Месяца</option>
@@ -30,8 +30,8 @@ import { createApp } from "vue";
         <option :value="{ number: 10 }">10 Месяцев</option>
         <option :value="{ number: 11 }">11 Месяцев</option>
         <option :value="{ number: 12 }">12 Месяцев</option> -->
-      </select>
-    </div>
+    </select>
+  </div>
 </template>
 
 <script>

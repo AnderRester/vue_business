@@ -1,6 +1,6 @@
 <script setup>
 import { createApp } from "vue";
-import calculationApp from "../router/index.js";
+import "../router/index.js";
 // import Drop from "@/components/DropdownItem.vue";
 </script>
 
@@ -98,7 +98,6 @@ import calculationApp from "../router/index.js";
 // });
 // calculationApp.mount("#calculationApp");
 </script>
-
 
 <style>
 .calculation_fp_cont,
