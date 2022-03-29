@@ -52,39 +52,44 @@ import { createApp } from "vue";
         </div>
       </div>
     </div>
-    <div id="calculationApp">
-      <div class="createTable">
-        <div class="monthId">
-          <div>ID</div>
-          <hr />
-          <div>{{ periodChoice }}</div>
-        </div>
-        <div class="amountRemains">
-          <div>Remains</div>
-          <hr />
-          <div>{{ periodChoice }}</div>
-        </div>
-        <div class="amountToPay">
-          <div>To pay</div>
-          <hr />
-          <div>{{ periodChoice }}</div>
-        </div>
+
+    <div class="createTable">
+      <div class="monthId">
+        <div>ID</div>
+        <hr />
+        <div>{{ periodChoice }}</div>
+      </div>
+      <div class="amountRemains">
+        <div>Remains</div>
+        <hr />
+        <div>{{ periodChoice }}</div>
+      </div>
+      <div class="amountToPay">
+        <div>To pay</div>
+        <hr />
+        <div>{{ periodChoice }}</div>
       </div>
     </div>
+    <div id="calculationApp"></div>
+        <div>{{ periodChoice }}</div>
+        <div>{{ toGet }}</div>
+        <div>{{ toPay }}</div>
   </div>
 </template>
 
 <script>
 const calculationApp = createApp({
-  data: {
-    periodChoice: null,
+  data() {
+    return {
+      toGet: 0,
+      toPay: 0,
+      periodChoice: 0
+    }
   },
   methods: {
-    say(periodChoice) {
-      console.log(periodChoice);
-    },
-  },
-}).mount("calculationApp");
+
+  }
+}).mount("#calculationApp");
 </script>
 
 
